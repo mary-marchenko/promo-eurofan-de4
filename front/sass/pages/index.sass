@@ -348,10 +348,28 @@ body
       justify-content: center
       gap: 24px
       &-item
-        height: 35px
+        height: 45px
         display: flex
+        flex-direction: column
         justify-content: center
         align-items: center
+        cursor: pointer
+        transition: all 0.2s ease
+        border-bottom: 2px solid transparent
+        &:hover
+          .table__tabs-name
+            color: $accent-blue
+        &.active
+          border-color: $accent-blue
+          .table__tabs-name
+            color: $accent-blue
+        &.disabled
+          opacity: 0.8
+          cursor: not-allowed
+          &:hover
+            .table__tabs-name
+              color: $text-white
+      &-name
         font-size: 14px
         font-family: $font-roboto-bold
         color: $text-white
@@ -359,21 +377,11 @@ body
         border-bottom: 2px solid transparent
         cursor: pointer
         transition: all 0.2s ease
-        span
-          text-transform: uppercase
-          display: inline-block
-          padding-right: 5px
-        &:hover
-          color: $accent-blue
-        &.active
-          border-color: $accent-blue
-          color: $accent-blue
-        &.disabled
-          opacity: 0.8
-          cursor: not-allowed
-          &:hover
-            color: $text-white
-
+        text-transform: uppercase
+      &-date
+        font-family: $font-exo2-regular
+        color: $text-muted
+        font-size: 10px
     &__head
       width: 100%
       background-color: $bg-table-head
@@ -383,7 +391,6 @@ body
         color: $text-muted
         font-size: 12px
         height: 35px
-
     &__body
       width: 100%
       display: flex

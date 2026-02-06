@@ -28,8 +28,8 @@ button.menu-btn menu
             a.info__btn.btn.unauth-msg(data-translate="signBtn" href="/login/" data-promo="eurofan_130226" data-button="authorization_content") Взяти участь
             button.info__btn.btn.part-btn.hide(data-translate="partBtn" data-promo="eurofan_130226" data-button="takePart_content") Взяти участь
             a.info__btn.btn.play-btn.hide(data-translate="playBtn" href="/sports/sport/soccer/" data-promo="eurofan_130226" data-button="placeBet_content") Робити ставки
-    .instruction
-        h2.h2.instruction__title(data-translate="instructionTitle") Як взяти участь?
+    //.instruction
+    //    h2.h2.instruction__title(data-translate="instructionTitle") Як взяти участь?
     .drop
         details.dropdown
             summary(data-translate="detailsSummary") Деталі
@@ -51,8 +51,12 @@ button.menu-btn menu
     h2.h2.eurofan__results(data-translate="resultsTitle") Результати
     .table
         .table__tabs
-            .table__tabs-item.active(data-week="1") #[span(data-translate="tableTab") Етап] 1
-            .table__tabs-item(data-week="2") #[span(data-translate="tableTab") Етап] 2
+            .table__tabs-item.active(data-week="1")
+                .table__tabs-name(data-translate="tableTab1") Етап 1
+                .table__tabs-date(data-translate="tableDate1") 13.02 -19.02
+            .table__tabs-item(data-week="2")
+                .table__tabs-name(data-translate="tableTab2") Етап 2
+                .table__tabs-date(data-translate="tableDate2") 20.02 -26.02
         .table__head
             .table__row
                 .table__row-item(data-translate="tablePlace") Місце
